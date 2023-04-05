@@ -245,3 +245,8 @@ test('returned output can be spread using rest operator', () => {
   const { rerender, ...rest } = render(<View testID="inner" />);
   expect(rest).toBeTruthy();
 });
+
+test('GetByRole', () => {
+  const { getByRole } = render(<View accessible role="button"/>)
+  expect(getByRole("button")).toBeTruthy()
+});
